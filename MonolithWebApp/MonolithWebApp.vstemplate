@@ -1,0 +1,37 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  
+  <TemplateData>
+    <Name>Monolithic web application project</Name>
+    <Description>
+      A project template for building Monolithic web application based on ASP.NET Core
+    </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType />
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MonolithicWebApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+  </TemplateData>
+  
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$projectname$.Core" CopyParameters="true">
+        ApplicationName.Core\CoreTemplate.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.Bll" CopyParameters="true">
+        ApplicationName.Bll\BllTemplate.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.MsSqlDal" CopyParameters="true">
+        ApplicationName.MsSqlDal\MsSqlDalTemplate.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.Web" CopyParameters="true">
+        ApplicationName.Web\WebTemplate.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.WebApi" CopyParameters="true">
+        ApplicationName.WebApi\WebApiTemplate.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>
