@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TemplateGenerationUtil.Standalone": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Projects\\VisualStudioTemplates\\MonolithWebApp\\ApplicationName.Web.sln"
+    }
+  }
+}
