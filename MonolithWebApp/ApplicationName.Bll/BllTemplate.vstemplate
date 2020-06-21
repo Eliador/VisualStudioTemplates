@@ -20,7 +20,7 @@
     </Project>
 
     <CustomParameters>
-      <CustomParameter Name="$appname$" Value="$ext_projectname$"/>
+      <CustomParameter Name="ApplicationName" Value="$safeprojectname$"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>

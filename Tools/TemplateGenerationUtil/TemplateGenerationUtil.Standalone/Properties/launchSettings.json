@@ -2,7 +2,7 @@
   "profiles": {
     "TemplateGenerationUtil.Standalone": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Projects\\VisualStudioTemplates\\MonolithWebApp\\ApplicationName.Web.sln"
+      "commandLineArgs": "-rt C:\\Projects\\VisualStudioTemplates\\MonolithWebApp\\MonolithWebApp.vstemplate -o C:\\Temp\\Template"
     }
   }
 }
