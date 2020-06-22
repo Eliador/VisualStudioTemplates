@@ -13,6 +13,7 @@
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <CreateInPlace>true</CreateInPlace>
   </TemplateData>
+  
   <TemplateContent>
     <Project TargetFileName="ApplicationName.Core.csproj" File="ApplicationName.Core.csproj" ReplaceParameters="true">
       <Folder Name="Configuration" TargetFolderName="Configuration">
@@ -43,5 +44,14 @@
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="DependencyInjectionModule.cs">DependencyInjectionModule.cs</ProjectItem>
     </Project>
+
+    <CustomParameters>
+      <CustomParameter Name="ApplicationName" Value="$safeprojectname$"/>
+    </CustomParameters>
   </TemplateContent>
+
+  <WizardExtension>
+    <Assembly>MonolithicWebApp.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59a503f534a7c73d</Assembly>
+    <FullClassName>MonolithicWebApp.Wizard.TemplateWizard</FullClassName>
+  </WizardExtension>
 </VSTemplate>

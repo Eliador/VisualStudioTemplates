@@ -14,6 +14,7 @@
     <CreateInPlace>true</CreateInPlace>
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
+  
   <TemplateContent>
     <Project TargetFileName="ApplicationName.Web.csproj" File="ApplicationName.Web.csproj" ReplaceParameters="true">
       <Folder Name="Properties" TargetFolderName="Properties">
@@ -36,5 +37,14 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
     </Project>
+
+    <CustomParameters>
+      <CustomParameter Name="ApplicationName" Value="$safeprojectname$"/>
+    </CustomParameters>
   </TemplateContent>
+
+  <WizardExtension>
+    <Assembly>MonolithicWebApp.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59a503f534a7c73d</Assembly>
+    <FullClassName>MonolithicWebApp.Wizard.TemplateWizard</FullClassName>
+  </WizardExtension>
 </VSTemplate>

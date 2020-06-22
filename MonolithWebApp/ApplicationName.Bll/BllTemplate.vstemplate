@@ -13,6 +13,7 @@
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <CreateInPlace>true</CreateInPlace>
   </TemplateData>
+  
   <TemplateContent>
     <Project TargetFileName="ApplicationName.Bll.csproj" File="ApplicationName.Bll.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="DependencyInjectionModule.cs">DependencyInjectionModule.cs</ProjectItem>
@@ -22,4 +23,9 @@
       <CustomParameter Name="ApplicationName" Value="$safeprojectname$"/>
     </CustomParameters>
   </TemplateContent>
+
+  <WizardExtension>
+    <Assembly>MonolithicWebApp.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59a503f534a7c73d</Assembly>
+    <FullClassName>MonolithicWebApp.Wizard.TemplateWizard</FullClassName>
+  </WizardExtension>
 </VSTemplate>
