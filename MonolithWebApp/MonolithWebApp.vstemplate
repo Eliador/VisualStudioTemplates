@@ -13,6 +13,7 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>TemplateIcon.ico</Icon>
   </TemplateData>
   
   <TemplateContent>
