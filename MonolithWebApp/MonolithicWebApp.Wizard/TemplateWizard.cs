@@ -7,15 +7,15 @@ namespace MonolithicWebApp.Wizard
     {
         private static string basename;
 
-        public void BeforeOpeningFile(global::EnvDTE.ProjectItem projectItem)
+        public void BeforeOpeningFile(EnvDTE.ProjectItem projectItem)
         {
         }
 
-        public void ProjectFinishedGenerating(global::EnvDTE.Project project)
+        public void ProjectFinishedGenerating(EnvDTE.Project project)
         {
         }
 
-        public void ProjectItemFinishedGenerating(global::EnvDTE.ProjectItem projectItem)
+        public void ProjectItemFinishedGenerating(EnvDTE.ProjectItem projectItem)
         {
         }
 

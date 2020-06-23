@@ -1,5 +1,4 @@
-﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
-  
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
   <TemplateData>
     <Name>Monolithic web application project</Name>
     <Description>
@@ -35,4 +34,9 @@
       </ProjectTemplateLink>
     </ProjectCollection>
   </TemplateContent>
+
+  <WizardExtension>
+    <Assembly>MonolithicWebApp.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59a503f534a7c73d</Assembly>
+    <FullClassName>MonolithicWebApp.Wizard.TemplateWizard</FullClassName>
+  </WizardExtension>
 </VSTemplate>
