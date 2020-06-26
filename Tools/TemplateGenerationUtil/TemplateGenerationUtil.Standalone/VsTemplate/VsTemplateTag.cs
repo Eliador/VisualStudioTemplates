@@ -9,6 +9,8 @@
         public const string ProjectNode = "Project";
         public const string ProjectItemNode = "ProjectItem";
         public const string FolderNode = "Folder";
+        public const string TemplateDataNode = "TemplateData";
+        public const string IconNode = "Icon";
 
         // VS Template XML Attributes constants
         public const string FileAttribute = "File";

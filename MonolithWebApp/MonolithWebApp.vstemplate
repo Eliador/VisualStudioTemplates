@@ -17,6 +17,9 @@
   
   <TemplateContent>
     <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$projectname$.Web" CopyParameters="true">
+        ApplicationName.Web\WebTemplate.vstemplate
+      </ProjectTemplateLink>
       <ProjectTemplateLink ProjectName="$projectname$.Core" CopyParameters="true">
         ApplicationName.Core\CoreTemplate.vstemplate
       </ProjectTemplateLink>
@@ -25,12 +28,6 @@
       </ProjectTemplateLink>
       <ProjectTemplateLink ProjectName="$projectname$.MsSqlDal" CopyParameters="true">
         ApplicationName.MsSqlDal\MsSqlDalTemplate.vstemplate
-      </ProjectTemplateLink>
-      <ProjectTemplateLink ProjectName="$projectname$.Web" CopyParameters="true">
-        ApplicationName.Web\WebTemplate.vstemplate
-      </ProjectTemplateLink>
-      <ProjectTemplateLink ProjectName="$projectname$.WebApi" CopyParameters="true">
-        ApplicationName.WebApi\WebApiTemplate.vstemplate
       </ProjectTemplateLink>
     </ProjectCollection>
   </TemplateContent>

@@ -26,7 +26,7 @@ namespace TemplateGenerationUtil.Standalone.VsTemplate
 
         public ICollection<string> GetProjectTemplateLinks()
         {
-            var templateContentNode = GetTemplateContentNode();
+            var templateContentNode = GetSingleNode(VsTemplateTag.TemplateContentNode);
             var projectCollection = templateContentNode
                 .SelectSingleNode(GetNodeName(VsTemplateTag.ProjectCollectionNode), _namespaceManager);
 
@@ -37,28 +37,11 @@ namespace TemplateGenerationUtil.Standalone.VsTemplate
                 .ToList();
         }
 
-        private string GetNodeName(string name)
-        {
-            return $"//{XmlNamespacePrefix}:{name}";
-        }
-
-        private XmlNode GetTemplateContentNode()
-        {
-            var templateContentNode = _xmlDoc
-                .SelectSingleNode(GetNodeName(VsTemplateTag.TemplateContentNode), _namespaceManager);
-            if (templateContentNode == null)
-            {
-                throw new Exception(); // TODO
-            }
-
-            return templateContentNode;
-        }
-
         public ICollection<string> GetProjectTemplateItems()
         {
             var projectItems = new List<string>();
 
-            var templateContentNode = GetTemplateContentNode();
+            var templateContentNode = GetSingleNode(VsTemplateTag.TemplateContentNode);
 
             var projectNode = templateContentNode
                 .SelectSingleNode(GetNodeName(VsTemplateTag.ProjectNode), _namespaceManager);
@@ -68,6 +51,33 @@ namespace TemplateGenerationUtil.Standalone.VsTemplate
             projectItems.AddRange(GetProjectItems(projectNode, string.Empty));
 
             return projectItems;
+        }
+
+        public string GetTemplateIcon()
+        {
+            var templateDataNode = GetSingleNode(VsTemplateTag.TemplateDataNode);
+
+            var iconNode = templateDataNode
+                .SelectSingleNode(GetNodeName(VsTemplateTag.IconNode), _namespaceManager);
+
+            return iconNode != null ? iconNode.InnerText.Trim() : null;
+        }
+
+        private string GetNodeName(string name)
+        {
+            return $"//{XmlNamespacePrefix}:{name}";
+        }
+
+        private XmlNode GetSingleNode(string nodeName)
+        {
+            var templateContentNode = _xmlDoc
+                .SelectSingleNode(GetNodeName(nodeName), _namespaceManager);
+            if (templateContentNode == null)
+            {
+                throw new Exception(); // TODO
+            }
+
+            return templateContentNode;
         }
 
         private ICollection<string> GetProjectItems(XmlNode rootNode, string path)

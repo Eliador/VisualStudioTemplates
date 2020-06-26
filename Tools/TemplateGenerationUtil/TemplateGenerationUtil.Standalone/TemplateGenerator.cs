@@ -35,14 +35,24 @@ namespace TemplateGenerationUtil.Standalone
 
         private void CopyTemplateSources(string rootTemplatePath, string outputPath)
         {
-            var fileName = Path.GetFileName(rootTemplatePath);
-            var destFile = Path.Combine(outputPath, fileName);
-            CopyToTempFolder(rootTemplatePath, destFile);
+            var rootTemplatFileName = Path.GetFileName(rootTemplatePath);
+            var rootTemplatDest = Path.Combine(outputPath, rootTemplatFileName);
+            var rootPath = Path.GetDirectoryName(rootTemplatePath);
+
+            CopyToTempFolder(rootTemplatePath, rootTemplatDest);
 
             var rootTemplateDocument = new VsTemplateDocument(rootTemplatePath);
-            var templateProjectsPaths = rootTemplateDocument.GetProjectTemplateLinks();
 
-            var rootPath = Path.GetDirectoryName(rootTemplatePath);
+            var iconFile = rootTemplateDocument.GetTemplateIcon();
+            if (!string.IsNullOrWhiteSpace(iconFile))
+            {
+                var iconSource = Path.Combine(rootPath, iconFile);
+                var iconDest = Path.Combine(outputPath, iconFile);
+                CopyToTempFolder(iconSource, iconDest);
+            }
+
+            var templateProjectsPaths = rootTemplateDocument.GetProjectTemplateLinks();
+            
             foreach (var templateProjectPath in templateProjectsPaths)
             {
                 ProcessProjectTemplate(templateProjectPath, rootPath, outputPath);

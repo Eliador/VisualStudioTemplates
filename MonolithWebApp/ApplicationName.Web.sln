@@ -14,8 +14,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationName.MsSqlDal", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationName.Bll", "ApplicationName.Bll\ApplicationName.Bll.csproj", "{D386D493-AD8D-4BB5-BAEF-0334ACB5E8FF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationName.WebApi", "ApplicationName.WebApi\ApplicationName.WebApi.csproj", "{720D293F-BC9B-4278-8A6A-59EBC67A45B7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{936E6107-AF16-4B92-A76B-89EF97D4875F}"
 	ProjectSection(SolutionItems) = preProject
 		img.png = img.png
@@ -49,10 +47,6 @@ Global
 		{D386D493-AD8D-4BB5-BAEF-0334ACB5E8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D386D493-AD8D-4BB5-BAEF-0334ACB5E8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D386D493-AD8D-4BB5-BAEF-0334ACB5E8FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{720D293F-BC9B-4278-8A6A-59EBC67A45B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{720D293F-BC9B-4278-8A6A-59EBC67A45B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{720D293F-BC9B-4278-8A6A-59EBC67A45B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{720D293F-BC9B-4278-8A6A-59EBC67A45B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C9561A1-DDC3-4AED-B97F-7298B2FF3D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C9561A1-DDC3-4AED-B97F-7298B2FF3D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C9561A1-DDC3-4AED-B97F-7298B2FF3D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
