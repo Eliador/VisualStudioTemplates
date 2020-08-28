@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="py $(SolutionDir)..\Tools\BuildTemplate.py $(SolutionDir)\MonolithWebApp.vstemplate  $(SolutionDir)\MonolithicWebApp.VSIX\ProjectTemplates" />
+    <Exec Command="py $(SolutionDir)..\..\Tools\BuildTemplate.py $(SolutionDir)\MonolithWebApp.vstemplate  $(SolutionDir)\MonolithicWebApp.VSIX\ProjectTemplates" />
   </Target>
 
 </Project>
