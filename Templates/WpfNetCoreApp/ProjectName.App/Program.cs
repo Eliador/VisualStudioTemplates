@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-using WpfNetCoreProjectName.Core;
+using ProjectName.App.Core;
 
-namespace WpfNetCoreProjectName
+namespace ProjectName.App
 {
     public class Program
     {

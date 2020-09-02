@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
-using WpfNetCoreProjectName.Windows.ViewModels;
+using ProjectName.App.Windows.ViewModels;
 
-namespace WpfNetCoreProjectName.Core
+namespace ProjectName.App.Core
 {
     public class CompositionContext : IDisposable
     {

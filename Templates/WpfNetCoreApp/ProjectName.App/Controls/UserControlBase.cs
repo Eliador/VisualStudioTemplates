@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfNetCoreProjectName.Controls
+namespace ProjectName.App.Controls
 {
     public abstract class UserControlBase<TViewModel> : UserControl
         where TViewModel : ViewModelBase

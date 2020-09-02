@@ -1,0 +1,25 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
+  <TemplateData>
+    <Name>WPF desktop application project (.NET Core)</Name>
+    <Description>
+      A project template for building WPF desktop application on .NET Core
+    </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType />
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WpfNetCore</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>TemplateIcon.ico</Icon>
+  </TemplateData>
+  
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$projectname$.App" CopyParameters="true">
+        ApplicationName.Web\WebTemplate.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

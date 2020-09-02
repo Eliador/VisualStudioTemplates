@@ -1,7 +1,7 @@
-﻿using WpfNetCoreProjectName.Windows;
-using WpfNetCoreProjectName.Windows.ViewModels;
+﻿using ProjectName.App.Windows;
+using ProjectName.App.Windows.ViewModels;
 
-namespace WpfNetCoreProjectName
+namespace ProjectName.App
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

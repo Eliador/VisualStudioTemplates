@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
-namespace WpfNetCoreProjectName.Windows
+namespace ProjectName.App.Windows
 {
     public abstract class WindowBase<TViewModel> : Window
         where TViewModel: ViewModelBase

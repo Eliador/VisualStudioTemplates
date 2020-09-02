@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 
-namespace WpfNetCoreProjectName.Windows.ViewModels
+namespace ProjectName.App.Windows.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
