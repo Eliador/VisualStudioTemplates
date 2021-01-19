@@ -33,5 +33,9 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="MainWindow.xaml.cs">MainWindow.xaml.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
     </Project>
+
+    <CustomParameters>
+      <CustomParameter Name="ProjectName" Value="$safeprojectname$"/>
+    </CustomParameters>
   </TemplateContent>
 </VSTemplate>
