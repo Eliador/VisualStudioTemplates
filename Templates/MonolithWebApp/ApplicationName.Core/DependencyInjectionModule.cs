@@ -2,7 +2,6 @@
 using ApplicationName.Core.DependencyInjection;
 using ApplicationName.Core.Log;
 using Microsoft.Extensions.DependencyInjection;
-using NLog;
 
 namespace ApplicationName.Core
 {
@@ -12,8 +11,7 @@ namespace ApplicationName.Core
         {
             serviceCollection.AddScoped<IOperationScope, OperationScope>();
             serviceCollection.AddScoped<ICommandQueryDispatcher, CommandQueryDispatcher>();
-            serviceCollection.AddScoped<IApplicationLogger, ApplicationLogger>();
-            serviceCollection.AddScoped<ILogger>(serviceProvider => LogManager.GetCurrentClassLogger());
+            serviceCollection.AddScoped<IApplicationLogger, OutputApplicationLogger>();
         }
     }
 }

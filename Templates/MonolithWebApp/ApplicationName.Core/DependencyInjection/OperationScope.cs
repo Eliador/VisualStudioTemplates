@@ -6,9 +6,9 @@ namespace ApplicationName.Core.DependencyInjection
     {
         public OperationScope()
         {
-            ScopeId = Guid.NewGuid();
+            ScopeId = Guid.NewGuid().ToString();
         }
 
-        public Guid ScopeId { get; }
+        public string ScopeId { get; }
     }
 }

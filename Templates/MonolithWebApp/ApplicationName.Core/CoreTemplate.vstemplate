@@ -37,10 +37,10 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="ServiceCollectionExtension.cs">ServiceCollectionExtension.cs</ProjectItem>
       </Folder>
       <Folder Name="Log" TargetFolderName="Log">
-        <ProjectItem ReplaceParameters="true" TargetFileName="ApplicationLogger.cs">ApplicationLogger.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OutputApplicationLogger.cs">OutputApplicationLogger.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="IApplicationLogger.cs">IApplicationLogger.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="LoggingItemBuilder.cs">LoggingItemBuilder.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="LoggingPropertiesName.cs">LoggingPropertiesName.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ILogBuilder.cs">ILogBuilder.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OutputLogBuilder.cs">OutputLogBuilder.cs</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="DependencyInjectionModule.cs">DependencyInjectionModule.cs</ProjectItem>
     </Project>

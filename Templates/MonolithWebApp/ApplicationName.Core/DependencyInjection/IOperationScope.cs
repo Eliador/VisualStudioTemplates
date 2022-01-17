@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ApplicationName.Core.DependencyInjection
+﻿namespace ApplicationName.Core.DependencyInjection
 {
     public interface IOperationScope
     {
-        Guid ScopeId { get; }
+        string ScopeId { get; }
     }
 }

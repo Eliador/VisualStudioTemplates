@@ -16,14 +16,14 @@ namespace ApplicationName.Web.Middlewares
         public async Task InvokeAsync(HttpContext context, IApplicationLogger logger)
         {
             logger
-                .Info($"Execution started [{context.Request.RouteValues["controller"]}.{context.Request.RouteValues["action"]} {context.Request.Method}]")
-                .Write();
+                .Information($"Execution started [{context.Request.RouteValues["controller"]}.{context.Request.RouteValues["action"]} {context.Request.Method}]")
+                .Log();
 
             await _next.Invoke(context);
 
             logger
-                .Info($"Execution finished [{context.Request.RouteValues["controller"]}.{context.Request.RouteValues["action"]} {context.Request.Method}]")
-                .Write();
+                .Information($"Execution finished [{context.Request.RouteValues["controller"]}.{context.Request.RouteValues["action"]} {context.Request.Method}]")
+                .Log();
         }
     }
 }

@@ -2,16 +2,16 @@
 
 namespace ApplicationName.Core.Dal
 {
-    public abstract class UnitOfWorkBase<DataSourceContextT> : IUnitOfWork<DataSourceContextT> where DataSourceContextT : IDisposable
+    public abstract class UnitOfWorkBase<TDataSourceContext> : IUnitOfWork<TDataSourceContext> where TDataSourceContext : IDisposable
     {
         private bool disposed = false;
 
-        protected UnitOfWorkBase(IDataSourceContextBuilder<DataSourceContextT> contextBuilder)
+        protected UnitOfWorkBase(IDataSourceContextBuilder<TDataSourceContext> contextBuilder)
         {
             Context = contextBuilder.Build();
         }
 
-        public DataSourceContextT Context { get; }
+        public TDataSourceContext Context { get; }
 
         public void Dispose()
         {
