@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "webpack-dev",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "build dev",
+			"detail": "webpack-dev"
+		},
+		{
+			"type": "npm",
+			"script": "webpack-prod",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "webpack prod",
+			"detail": "webpack-prod"
+		},
+		{
+			"type": "npm",
+			"script": "webpack-dev-watch",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "webpack dev watch",
+			"detail": "webpack-dev-watch"
+		}
+	]
+}
